@@ -1,0 +1,22 @@
+<EventTable size="4">
+	<Event>
+		<Name>"CarDetection"</Name>
+		<Color>"Yellow"</Color>
+		<DrawingMethod>"TextTag"</DrawingMethod>
+	</Event>
+	<Event>
+		<Name>"PersonDetection"</Name>
+		<Color>"Blue"</Color>
+		<DrawingMethod>"BoundingBox"</DrawingMethod>
+	</Event>
+	<Event>
+		<Name>"MovementDetection"</Name>
+		<Color>"Red"</Color>
+		<DrawingMethod>"FillingObject"</DrawingMethod>
+	</Event>
+	<Event>
+		<Name>"ObjectDetection"</Name>
+		<Color>"Emerald"</Color>
+		<DrawingMethod>"EnclosingCircle"</DrawingMethod>
+	</Event>
+</EventTable>

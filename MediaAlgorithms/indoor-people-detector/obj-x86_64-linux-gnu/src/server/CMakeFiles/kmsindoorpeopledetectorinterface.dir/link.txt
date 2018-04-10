@@ -1,0 +1,2 @@
+/usr/bin/ar cr libkmsindoorpeopledetectorinterface.a  CMakeFiles/kmsindoorpeopledetectorinterface.dir/interface/generated-cpp/IndoorPeopleDetectorInternal.cpp.o CMakeFiles/kmsindoorpeopledetectorinterface.dir/interface/generated-cpp/IndoorPeopleDetector.cpp.o
+/usr/bin/ranlib libkmsindoorpeopledetectorinterface.a

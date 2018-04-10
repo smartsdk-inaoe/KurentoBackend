@@ -1,0 +1,18 @@
+{
+        "contextElements":[
+        {
+                "type": "Flag",
+                "isPattern": "false",
+                "id": "flag-movementdetection",
+                "attributes": [
+                {
+                        "name":"state",
+                        "type": "Boolean",
+                        "value": "false"
+                }
+        ]
+
+        }
+        ],
+        "updateAction": "APPEND"
+}

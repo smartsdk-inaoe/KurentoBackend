@@ -1,0 +1,28 @@
+{
+        "entities":[
+        {
+                "type":"EventTable",
+                "isPattern":"false",
+                "id":"eventtable-SurveillanceEvents"
+        }
+        ],
+        "attributes":[
+                "EventNames",
+		"EventColors",
+		"EventMethods",
+		"EventFlags"
+        ],
+        "reference":"http://192.168.56.1:8081",
+        "duration":"P1M",
+        "notifyConditions":[
+		{
+			"type":"ONCHANGE",
+			"condValues":[
+				"EventNames",
+				"EventColors",
+				"EventMethods",
+				"EventFlags"
+			]
+		}
+        ]
+}

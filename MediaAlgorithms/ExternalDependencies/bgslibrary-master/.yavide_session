@@ -1,0 +1,102 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+silent! argdel *
+set lines=41 columns=157
+winpos 0 24
+set splitbelow splitright
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd _ | wincmd |
+vsplit
+wincmd _ | wincmd |
+vsplit
+2wincmd h
+wincmd w
+wincmd w
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe '1resize ' . ((&lines * 27 + 20) / 41)
+exe 'vert 1resize ' . ((&columns * 31 + 78) / 157)
+exe '2resize ' . ((&lines * 27 + 20) / 41)
+exe 'vert 2resize ' . ((&columns * 84 + 78) / 157)
+exe '3resize ' . ((&lines * 27 + 20) / 41)
+exe 'vert 3resize ' . ((&columns * 40 + 78) / 157)
+exe '4resize ' . ((&lines * 10 + 20) / 41)
+argglobal
+enew
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+wincmd w
+argglobal
+enew
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+wincmd w
+argglobal
+enew
+file ~/OpenCV_code/bgslibrary-master/__Tagbar__
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+wincmd w
+argglobal
+enew
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+wincmd w
+4wincmd w
+exe '1resize ' . ((&lines * 27 + 20) / 41)
+exe 'vert 1resize ' . ((&columns * 31 + 78) / 157)
+exe '2resize ' . ((&lines * 27 + 20) / 41)
+exe 'vert 2resize ' . ((&columns * 84 + 78) / 157)
+exe '3resize ' . ((&lines * 27 + 20) / 41)
+exe 'vert 3resize ' . ((&columns * 40 + 78) / 157)
+exe '4resize ' . ((&lines * 10 + 20) / 41)
+tabnext 1
+if exists('s:wipebuf')
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 shortmess=filnxtToO
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

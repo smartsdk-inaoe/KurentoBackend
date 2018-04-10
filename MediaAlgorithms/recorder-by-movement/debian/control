@@ -1,0 +1,26 @@
+Source: recorder-by-movement
+Section: utils
+Priority: optional
+Maintainer: Maintainer Name
+Build-Depends: debhelper (>= 8.0.0),
+ cmake,
+ pkg-config,
+ kms-core-6.0-dev,
+ kms-elements-6.0-dev,
+ kms-filters-6.0-dev,
+ libopencv-dev
+Standards-Version: 3.9.4
+
+Package: recorder-by-movement
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+Description: package description
+
+Package: recorder-by-movement-dev
+Architecture: any
+Depends: recorder-by-movement (= ${binary:Version}),
+  kms-core-6.0-dev,
+  kms-elements-6.0-dev,
+  kms-filters-6.0-dev,
+  libopencv-dev
+Description: dev package description

@@ -1,0 +1,2 @@
+/usr/bin/ar cr libkmsoutdoorpeopledetectorinterface.a  CMakeFiles/kmsoutdoorpeopledetectorinterface.dir/interface/generated-cpp/OutdoorPeopleDetectorInternal.cpp.o CMakeFiles/kmsoutdoorpeopledetectorinterface.dir/interface/generated-cpp/OutdoorPeopleDetector.cpp.o
+/usr/bin/ranlib libkmsoutdoorpeopledetectorinterface.a

@@ -1,0 +1,9 @@
+Package: subsense
+Version: 0.0.1~rc1
+Architecture: amd64
+Maintainer: Maintainer Name
+Installed-Size: 286
+Depends: kms-core-6.0, kms-filters-6.0, kms-jsonrpc-1.0, kmsjsoncpp, libc6 (>= 2.3), libgcc1 (>= 1:4.1.1), libgstreamer1.5-0 (>= 1.8.1.1~20160909144007.170.g0d6031b.trusty), libopencv-core2.4, libopencv-features2d2.4, libopencv-highgui2.4, libopencv-imgproc2.4, libopencv-video2.4, libsigc++-2.0-0c2a (>= 2.0.2), libstdc++6 (>= 4.4.0)
+Section: utils
+Priority: optional
+Description: package description

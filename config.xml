@@ -1,0 +1,9 @@
+<Configuration>
+	<VideoPath>/path/to/videos</VideoPath>
+	<FilterPath>/path/to/filters</FilterPath>
+	<CameraURL1>rtsp://user:password@ip/axis-media/media.amp</CameraURL1>
+	<CameraURL2>rtsp://user:password@ip/axis-media/media.amp</CameraURL2>
+	<CameraURL3>rtsp://user:password@ip/axis-media/media.amp</CameraURL3>
+	<CameraURL4>rtsp://user:password@ip/axis-media/media.amp</CameraURL4>
+	<CameraURL5>rtsp://user:password@ip/axis-media/media.amp</CameraURL5>
+</Configuration>

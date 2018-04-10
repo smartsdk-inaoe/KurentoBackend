@@ -1,0 +1,3 @@
+/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/subsense/obj-x86_64-linux-gnu/src/server/CMakeFiles/kmssubsenseimpl.dir
+/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/subsense/obj-x86_64-linux-gnu/src/server/CMakeFiles/kmssubsenseinterface.dir
+/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/subsense/obj-x86_64-linux-gnu/src/server/CMakeFiles/kmssubsensemodule.dir

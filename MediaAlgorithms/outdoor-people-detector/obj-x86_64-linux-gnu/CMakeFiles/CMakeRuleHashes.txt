@@ -1,0 +1,6 @@
+# Hashes of file build rules.
+601a76299d6bb03fa5f57810931a14d8 src/server/cpp_interface.generated
+89088f31b1b03b171a3d3024ee1c7133 src/server/cpp_interface_internal.generated
+ffbb93cb2d3ba7a973100a3cb590a2e1 src/server/cpp_module.generated
+10ca8f0036d166f76bf91bb9a822c83d src/server/cpp_server_internal.generated
+14e1c610c40f2852e38d8cc32d5d2b93 src/server/outdoorpeopledetector.kmd.json

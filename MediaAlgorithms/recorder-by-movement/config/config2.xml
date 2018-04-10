@@ -1,0 +1,9 @@
+<Configuration>
+	<PythonFile>ContextBrokerAPI</PythonFile>
+	<PythonFunction>update_alert</PythonFunction>
+	<JsonFile>/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/recorder-by-movement/config/update_entity2.json</JsonFile>
+	<ParameterName>dateTime,refDevice,eventObserved</ParameterName> 
+	<VideoPath>/home/viva22017/SmartSecurityApp/kurento/videos</VideoPath>
+        <CameraName>Parking entrance</CameraName>
+        <CameraId>2</CameraId>
+</Configuration>

@@ -1,0 +1,10 @@
+Package: subsense-dev
+Source: subsense
+Version: 0.0.1~rc1
+Architecture: amd64
+Maintainer: Maintainer Name
+Installed-Size: 81
+Depends: subsense (= 0.0.1~rc1), kms-core-6.0-dev, kms-elements-6.0-dev, kms-filters-6.0-dev, libopencv-dev
+Section: utils
+Priority: optional
+Description: dev package description

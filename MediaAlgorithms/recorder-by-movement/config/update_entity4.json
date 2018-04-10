@@ -1,0 +1,27 @@
+{
+        "contextElements":[
+        {
+                "type": "Alert",
+                "isPattern": "false",
+                "id": "RecordingState4",
+                "attributes": [
+                {
+                        "name":"dateTime",
+                        "type": "string",
+                        "value": "2017-10-03T12:34:00.00Z"
+                },
+                {
+                        "name": "refDevice",
+                        "type": "string",
+                        "value": "4"
+                },
+                {
+                        "name": "eventObserved",
+                        "type": "string",
+                        "value": "idle"
+                }
+        ]
+        }
+        ],
+        "updateAction": "UPDATE"
+}

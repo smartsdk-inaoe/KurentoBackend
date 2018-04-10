@@ -1,0 +1,11 @@
+<Configuration>
+	<IndoorPeopleColor>220, 20, 60</IndoorPeopleColor>
+	<IndoorPeopleMethod>3</IndoorPeopleMethod>
+	<IndoorPeopleText>P-INAOE</IndoorPeopleText>
+	<OutdoorPeopleColor>0, 255, 255</OutdoorPeopleColor>
+	<OutdoorPeopleMethod>3</OutdoorPeopleMethod>
+	<OutdoorPeopleText>V-INAOE</OutdoorPeopleText>
+        <VisualizerColor>255, 255, 0</VisualizerColor>
+        <VisualizerMethod>1</VisualizerMethod>
+        <VisualizerText>Blob</VisualizerText>
+</Configuration>

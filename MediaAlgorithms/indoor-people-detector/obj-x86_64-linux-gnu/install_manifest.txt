@@ -1,0 +1,14 @@
+/usr/lib/x86_64-linux-gnu/libkmsindoorpeopledetectorinterface.a
+/usr/include/kurento/modules/indoorpeopledetector/IndoorPeopleDetector.hpp
+/usr/lib/x86_64-linux-gnu/pkgconfig/kmsindoorpeopledetector.pc
+/usr/lib/x86_64-linux-gnu/libkmsindoorpeopledetectorimpl.so.0.0.1~0.g1146bff
+/usr/lib/x86_64-linux-gnu/libkmsindoorpeopledetectorimpl.so.0
+/usr/lib/x86_64-linux-gnu/libkmsindoorpeopledetectorimpl.so
+/usr/include/kurento/modules/indoorpeopledetector/VPDetector.hpp
+/usr/include/kurento/modules/indoorpeopledetector/tinyxml2.h
+/usr/include/kurento/modules/indoorpeopledetector/IndoorPeopleDetectorOpenCVImpl.hpp
+/usr/include/kurento/modules/indoorpeopledetector/IndoorPeopleDetectorImpl.hpp
+/usr/include/kurento/modules/indoorpeopledetector/IndoorPeopleDetectorImplFactory.hpp
+/usr/lib/x86_64-linux-gnu/kurento/modules/libkmsindoorpeopledetectormodule.so
+/usr/share/cmake-2.8/Modules/FindKMSINDOORPEOPLEDETECTOR.cmake
+/usr/share/kurento/modules/indoorpeopledetector.kmd.json

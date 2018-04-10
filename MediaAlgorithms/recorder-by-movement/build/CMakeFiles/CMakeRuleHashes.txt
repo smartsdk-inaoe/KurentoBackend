@@ -1,0 +1,8 @@
+# Hashes of file build rules.
+73fd25adbe1fd3db5e1e4655a2b7808c src/server/CMakeFiles/java
+f61c2bcf9ad1ee5c42ba3a5819434a57 src/server/CMakeFiles/java_install
+65c4117bf696bafc72ff4e125c833a38 src/server/cpp_interface.generated
+78eaf0f655c5c9af4b38be09b37a8718 src/server/cpp_interface_internal.generated
+52c2002075011a2c46e1476826bad111 src/server/cpp_module.generated
+e2651674f8458b703912dac962d548b7 src/server/cpp_server_internal.generated
+d98e6da8c150c8bfb2d19366a10a4356 src/server/recorderbymovement.kmd.json

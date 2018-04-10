@@ -1,0 +1,3 @@
+/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/indoor-people-detector/obj-x86_64-linux-gnu/src/server/CMakeFiles/kmsindoorpeopledetectorimpl.dir
+/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/indoor-people-detector/obj-x86_64-linux-gnu/src/server/CMakeFiles/kmsindoorpeopledetectorinterface.dir
+/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/indoor-people-detector/obj-x86_64-linux-gnu/src/server/CMakeFiles/kmsindoorpeopledetectormodule.dir

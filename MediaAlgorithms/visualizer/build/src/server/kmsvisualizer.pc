@@ -1,0 +1,14 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include/kurento/modules/visualizer
+
+Name: kmsvisualizer
+Description: Kurento visualizer Module
+Version: 0.0.1-dev
+URL:
+Requires: kmscore  kmselements  kmsfilters  
+Requires.private:
+Libs: -L${libdir} -lkmsvisualizerimpl
+Libs.private:
+CFlags: -I${includedir}

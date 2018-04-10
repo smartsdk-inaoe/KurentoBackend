@@ -1,0 +1,33 @@
+{
+  "remoteClasses": [
+    {
+      "name": "RecorderByMovement",
+      "extends": "OpenCVFilter",
+      "doc": "RecorderByMovement interface. Documentation about the module",
+      "constructor": {
+	"doc": "Create an element",
+	"params": [
+	  {
+	    "name": "mediaPipeline",
+	    "doc": "the parent :rom:cls:`MediaPipeline`",
+	    "type": "MediaPipeline",
+	    "final": true
+	  }
+	]
+      },
+      "methods": [
+        {
+          "name": "loadConfig",
+          "doc": "Pass the config file path and load it.",
+          "params": [ 
+            {
+              "name": "file",
+              "doc": "...",
+              "type": "String"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

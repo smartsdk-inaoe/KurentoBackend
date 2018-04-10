@@ -1,0 +1,53 @@
+{
+        "contextElements":[
+        {
+                "type": "EventTable",
+                "isPattern": "false",
+                "id": "eventtable-SurveillanceEvents",
+                "attributes": [
+                {
+                        "name":"EventNames",
+                        "type":"Vector",
+                        "value":[
+                                        "CarDetection",
+                                        "PersonDetection",
+                                        "MovementDetection",
+                                        "DogDetection"
+                                ]
+                },
+                {
+                        "name":"EventColors",
+                        "type":"Vector",
+                        "value":[
+                                        "Magenta",
+                                        "Blue",
+                                        "Teal",
+                                        "Crimson"
+                                ]
+                },
+                {
+                        "name":"EventMethods",
+                        "type":"Vector",
+                        "value":[
+                                        "TextTag",
+                                        "TextTag",
+                                        "FillingObject",
+                                        "EnclosingCircle"
+                                ]
+                },
+                {
+                        "name":"EventFlags",
+                        "type":"Vector",
+                        "value":[
+                                        "true",
+                                        "true",
+                                        "true",
+                                        "true"
+                                ]
+                }
+        ]
+        }
+        ],
+        "updateAction": "UPDATE"
+}
+

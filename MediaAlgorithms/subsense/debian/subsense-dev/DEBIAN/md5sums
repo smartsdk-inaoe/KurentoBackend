@@ -1,0 +1,9 @@
+a0ed715025d72be3b975a6fe9cd24b93  usr/include/kurento/modules/subsense/Subsense.hpp
+b07cb38ed5750f89f821df77727a46ff  usr/include/kurento/modules/subsense/SubsenseImpl.hpp
+25b938d3397b65d1c0d03da8f30a864d  usr/include/kurento/modules/subsense/SubsenseImplFactory.hpp
+8104c3cfcc2286550068b6aa1bfee7ed  usr/include/kurento/modules/subsense/SubsenseOpenCVImpl.hpp
+947a84dceb2e21a8e50aa9fa741f1e51  usr/lib/x86_64-linux-gnu/pkgconfig/kmssubsense.pc
+1039c8bc724ef116bf9b5296aa6773c1  usr/share/cmake-2.8/Modules/FindKMSSUBSENSE.cmake
+6867fb29193e58e739b7e2530a8b0f7c  usr/share/doc/subsense-dev/changelog.gz
+d41d8cd98f00b204e9800998ecf8427e  usr/share/doc/subsense-dev/copyright
+c7500177da8fc242e7cf2c6b5ea45c04  usr/share/kurento/modules/subsense.kmd.json

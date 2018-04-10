@@ -1,0 +1,2 @@
+/usr/bin/ar cr libkmsvisualizerinterface.a  CMakeFiles/kmsvisualizerinterface.dir/interface/generated-cpp/VisualizerInternal.cpp.o CMakeFiles/kmsvisualizerinterface.dir/interface/generated-cpp/Visualizer.cpp.o
+/usr/bin/ranlib libkmsvisualizerinterface.a

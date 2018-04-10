@@ -1,0 +1,8 @@
+# Hashes of file build rules.
+e9c69d6b74f3a7519639175fef2c6aa5 src/server/CMakeFiles/java
+ac3bc342d0666039b31e31cee9dc9286 src/server/CMakeFiles/java_install
+fbab012cf3459faef38dd1f04b6b0dcc src/server/cpp_interface.generated
+181de03d56a347443bad2f76df7877ed src/server/cpp_interface_internal.generated
+a7571153b5b755929490bd948d871df1 src/server/cpp_module.generated
+f234a55713704c53416f3d9353efd3bb src/server/cpp_server_internal.generated
+c056a90eb290556f196e260229afd0fb src/server/outdoorpeopledetector.kmd.json

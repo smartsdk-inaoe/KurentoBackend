@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/luis/OpenCV_code/bgslibrary-master/package_bgs/FrameDifferenceBGS.cpp
+FrameDifferenceBGS.h
+/home/luis/OpenCV_code/bgslibrary-master/package_bgs/FrameDifferenceBGS.h
+
+/home/luis/OpenCV_code/bgslibrary-master/package_bgs/FrameDifferenceBGS.h
+iostream
+-
+opencv2/opencv.hpp
+-
+IBGS.h
+/home/luis/OpenCV_code/bgslibrary-master/package_bgs/IBGS.h
+
+/home/luis/OpenCV_code/bgslibrary-master/package_bgs/IBGS.h
+opencv2/opencv.hpp
+-
+

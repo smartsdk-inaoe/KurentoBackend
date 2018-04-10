@@ -1,0 +1,10 @@
+fc88f1cf39d640321f2dbf525cdd01d6  usr/include/kurento/modules/visualizer/VPDetector.hpp
+419d6e98b2d7654f8edb370932fb523b  usr/include/kurento/modules/visualizer/Visualizer.hpp
+e6632face082868c2b2afeeaaa4ac59b  usr/include/kurento/modules/visualizer/VisualizerImpl.hpp
+5579ec9e636f1b3a5bb09d66e7865c53  usr/include/kurento/modules/visualizer/VisualizerImplFactory.hpp
+c22879e8d9d886243f55b9744795ca21  usr/include/kurento/modules/visualizer/VisualizerOpenCVImpl.hpp
+26f0ad8a135ca864d3008d3975b9e26d  usr/lib/x86_64-linux-gnu/pkgconfig/kmsvisualizer.pc
+e790d8e788c75e85cf13e3ab571a778d  usr/share/cmake-2.8/Modules/FindKMSVISUALIZER.cmake
+00bdd369111a92d9f9bc33905c47066e  usr/share/doc/visualizer-dev/changelog.gz
+d41d8cd98f00b204e9800998ecf8427e  usr/share/doc/visualizer-dev/copyright
+bdf3e4fd467f9177e42c141f9fa12605  usr/share/kurento/modules/visualizer.kmd.json

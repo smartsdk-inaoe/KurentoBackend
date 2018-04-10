@@ -1,0 +1,44 @@
+{
+  "remoteClasses": [
+    {
+      "name": "OutdoorPeopleDetector",
+      "extends": "OpenCVFilter",
+      "doc": "OutdoorPeopleDetector interface. Documentation about the module",
+      "constructor": {
+	"doc": "Create an element",
+	"params": [
+	  {
+	    "name": "mediaPipeline",
+	    "doc": "the parent :rom:cls:`MediaPipeline`",
+	    "type": "MediaPipeline",
+	    "final": true
+	  }
+	]
+      },
+      "methods": [
+        {
+          "name": "setDB",
+          "doc": "Set the database to be loaded.",
+          "params": [
+            {
+              "name": "db",
+              "doc": "..",
+              "type": "String"
+            }
+          ]
+        },
+        {
+          "name": "setConfiguration",
+          "doc": "Read the parameters for drawing.",
+          "params": [
+            {
+              "name": "file",
+              "doc": "..",
+              "type": "String"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

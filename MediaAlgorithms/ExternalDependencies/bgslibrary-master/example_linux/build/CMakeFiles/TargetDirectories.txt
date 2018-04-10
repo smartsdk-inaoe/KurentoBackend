@@ -1,0 +1,2 @@
+/home/luis/OpenCV_code/bgslibrary-master/example_linux/build/CMakeFiles/FrameDifferenceTest.dir
+/home/luis/OpenCV_code/bgslibrary-master/example_linux/build/CMakeFiles/bgs.dir

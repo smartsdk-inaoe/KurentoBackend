@@ -1,0 +1,76 @@
+{
+  "name": "visualizer",
+  "version": "0.0.1-dev",
+  "kurentoVersion": "^6.0.0",
+  "imports": [
+    {
+      "name": "core",
+      "version": "^6.0.0",
+      "mavenVersion": "[6.0.0,7.0.0-SNAPSHOT)",
+      "npmVersion": ">=6.0.0 <7.0.0"
+    },
+    {
+      "name": "elements",
+      "version": "^6.0.0",
+      "mavenVersion": "[6.0.0,7.0.0-SNAPSHOT)",
+      "npmVersion": ">=6.0.0 <7.0.0"
+    },
+    {
+      "name": "filters",
+      "version": "^6.0.0",
+      "mavenVersion": "[6.0.0,7.0.0-SNAPSHOT)",
+      "npmVersion": ">=6.0.0 <7.0.0"
+    }
+  ],
+  "code": {
+    "api": {
+      "java": {
+        "mavenGroupId": "org.kurento.module",
+        "mavenArtifactId": "visualizer",
+        "mavenVersion": "0.0.1-SNAPSHOT",
+        "packageName": "org.kurento.module.visualizer"
+      },
+      "js": {
+        "nodeName": "kurento-module-visualizer",
+        "npmVersion": "0.0.1",
+        "npmDescription": ""
+      }
+    },
+    "implementation": {
+      "cppNamespace": "kurento::module::visualizer",
+      "lib": "libkmsvisualizer"
+    }
+  },
+  "remoteClasses": [
+    {
+      "name": "Visualizer",
+      "doc": "Visualizer interface. Documentation about the module",
+      "extends": "OpenCVFilter",
+      "constructor": {
+        "params": [
+          {
+            "name": "mediaPipeline",
+            "doc": "the parent :rom:cls:`MediaPipeline`",
+            "type": "MediaPipeline"
+          }
+        ],
+        "doc": "Create an element"
+      },
+      "methods": [
+        {
+          "params": [
+            {
+              "name": "file",
+              "doc": "..",
+              "type": "String"
+            }
+          ],
+          "name": "setConfiguration",
+          "doc": "Read the parameters for drawing."
+        }
+      ]
+    }
+  ],
+  "complexTypes": [],
+  "events": []
+}

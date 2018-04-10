@@ -1,0 +1,5 @@
+/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/recorder-by-movement/build/src/server/CMakeFiles/java.dir
+/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/recorder-by-movement/build/src/server/CMakeFiles/java_install.dir
+/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/recorder-by-movement/build/src/server/CMakeFiles/kmsrecorderbymovementimpl.dir
+/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/recorder-by-movement/build/src/server/CMakeFiles/kmsrecorderbymovementinterface.dir
+/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/recorder-by-movement/build/src/server/CMakeFiles/kmsrecorderbymovementmodule.dir

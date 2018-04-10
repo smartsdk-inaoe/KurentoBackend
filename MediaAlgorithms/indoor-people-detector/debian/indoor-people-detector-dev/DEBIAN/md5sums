@@ -1,0 +1,10 @@
+4432ba184ca766e1cc1b3e6e830f0e61  usr/include/kurento/modules/indoorpeopledetector/IndoorPeopleDetector.hpp
+c33f6f5fede9ba05990d1e66f2dccf21  usr/include/kurento/modules/indoorpeopledetector/IndoorPeopleDetectorImpl.hpp
+8ae7b730ee30c4a51f31a1c7c1488157  usr/include/kurento/modules/indoorpeopledetector/IndoorPeopleDetectorImplFactory.hpp
+33949a04793d2f4d0dc118289e1e60af  usr/include/kurento/modules/indoorpeopledetector/IndoorPeopleDetectorOpenCVImpl.hpp
+fc88f1cf39d640321f2dbf525cdd01d6  usr/include/kurento/modules/indoorpeopledetector/VPDetector.hpp
+b066936b242aaa03f78ed408ac6e30ad  usr/lib/x86_64-linux-gnu/pkgconfig/kmsindoorpeopledetector.pc
+d955f61034923f708d8b6ad1abc1a101  usr/share/cmake-2.8/Modules/FindKMSINDOORPEOPLEDETECTOR.cmake
+33f83453ac1d9808d48a009a52af981f  usr/share/doc/indoor-people-detector-dev/changelog.gz
+d41d8cd98f00b204e9800998ecf8427e  usr/share/doc/indoor-people-detector-dev/copyright
+8169cc3a8c0a7d52c36368634e259cd9  usr/share/kurento/modules/indoorpeopledetector.kmd.json

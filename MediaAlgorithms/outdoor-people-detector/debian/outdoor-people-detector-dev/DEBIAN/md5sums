@@ -1,0 +1,10 @@
+befc6d42cd960ccf07ca2efe837e101e  usr/include/kurento/modules/outdoorpeopledetector/OutdoorPeopleDetector.hpp
+ed3cdd63a7847392d3338fc6ca9fe4b9  usr/include/kurento/modules/outdoorpeopledetector/OutdoorPeopleDetectorImpl.hpp
+443eb4d5a95990bc7e64f59871c736f0  usr/include/kurento/modules/outdoorpeopledetector/OutdoorPeopleDetectorImplFactory.hpp
+b2903d483239a37ae90f0b440ce95396  usr/include/kurento/modules/outdoorpeopledetector/OutdoorPeopleDetectorOpenCVImpl.hpp
+fc88f1cf39d640321f2dbf525cdd01d6  usr/include/kurento/modules/outdoorpeopledetector/VPDetector.hpp
+82469d4aaafc42a0a3c9360dcd83ace4  usr/lib/x86_64-linux-gnu/pkgconfig/kmsoutdoorpeopledetector.pc
+a44794a3438eb34dab62933bb81e3b47  usr/share/cmake-2.8/Modules/FindKMSOUTDOORPEOPLEDETECTOR.cmake
+b91c4d8eb1a67a18aced5ec1b1170f0e  usr/share/doc/outdoor-people-detector-dev/changelog.gz
+d41d8cd98f00b204e9800998ecf8427e  usr/share/doc/outdoor-people-detector-dev/copyright
+883cac71be2062c9fe722be98431caf1  usr/share/kurento/modules/outdoorpeopledetector.kmd.json

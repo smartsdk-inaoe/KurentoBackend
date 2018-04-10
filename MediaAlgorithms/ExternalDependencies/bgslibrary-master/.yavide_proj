@@ -1,0 +1,4 @@
+let g:project_root_directory = '/home/luis/OpenCV_code/bgslibrary-master'
+let g:project_name = 'bgslibrary_pro'
+let g:project_category = 1
+let g:project_type = 1
