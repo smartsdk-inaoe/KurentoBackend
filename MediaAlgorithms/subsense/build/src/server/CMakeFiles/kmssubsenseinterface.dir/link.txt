@@ -1,2 +1,0 @@
-/usr/bin/ar cr libkmssubsenseinterface.a  CMakeFiles/kmssubsenseinterface.dir/interface/generated-cpp/SubsenseInternal.cpp.o CMakeFiles/kmssubsenseinterface.dir/interface/generated-cpp/Subsense.cpp.o
-/usr/bin/ranlib libkmssubsenseinterface.a

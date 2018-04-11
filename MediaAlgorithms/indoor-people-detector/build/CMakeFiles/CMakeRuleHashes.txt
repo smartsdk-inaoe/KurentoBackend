@@ -1,8 +1,0 @@
-# Hashes of file build rules.
-20516d6e0e1e93862eae9e76beaddd5e src/server/CMakeFiles/java
-07541dcb569ea6ec68012a9bd2364d6f src/server/CMakeFiles/java_install
-4345038ffa2e201fdda83b2e49157570 src/server/cpp_interface.generated
-34371cdf8a3d60ad709ed924d69765d6 src/server/cpp_interface_internal.generated
-fb4f116e86dd8e2f392f75443aab40ea src/server/cpp_module.generated
-26115b82b04166d725b4ea8f1675f0d2 src/server/cpp_server_internal.generated
-3b452ace93616516bde2dc85beba0d8c src/server/indoorpeopledetector.kmd.json

@@ -137,16 +137,6 @@
 			<artifactId>visualizer</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
-		<dependency><groupId>org.kurento.module</groupId>
-		<artifactId>detectorfilter</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-  			<groupId>org.kurento.module</groupId>
-		  	<artifactId>flagfilter</artifactId>
-  			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 	</dependencies>
 
 	<build>

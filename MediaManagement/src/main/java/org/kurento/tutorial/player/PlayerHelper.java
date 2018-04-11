@@ -14,7 +14,6 @@ import org.jdom.Element;
 import org.jdom.JDOMException;
 import org.jdom.input.SAXBuilder;
 
-import org.kurento.module.detectorfilter.DetectorFilter;
 import org.kurento.module.visualizer.Visualizer;
 import org.kurento.module.recorderbymovement.RecorderByMovement;
 import org.kurento.module.subsense.Subsense;
@@ -75,7 +74,6 @@ public class PlayerHelper
   PlayerEndpoint playerEndpoint2;
   final Subsense subsensefilter2 = new Subsense.Builder(pipeline2).build();
   final OutdoorPeopleDetector odf = new OutdoorPeopleDetector.Builder(pipeline2).build();
-  final DetectorFilter vi2 = new DetectorFilter.Builder(pipeline2).build();
   final IndoorPeopleDetector idf2 = new IndoorPeopleDetector.Builder(pipeline2).build();
   final RecorderByMovement rec2 = new RecorderByMovement.Builder(pipeline2).build();
 
@@ -83,7 +81,6 @@ public class PlayerHelper
   final MediaPipeline pipeline3 = kurento.createMediaPipeline();
   PlayerEndpoint playerEndpoint3;
   final Subsense subsensefilter3 = new Subsense.Builder(pipeline3).build();
-  final DetectorFilter detectorfilter3 = new DetectorFilter.Builder(pipeline3).build();
   final RecorderByMovement rec3 = new RecorderByMovement.Builder(pipeline3).build();
 
   final IndoorPeopleDetector idf3= new IndoorPeopleDetector.Builder(pipeline3).build();
@@ -92,7 +89,6 @@ public class PlayerHelper
   final MediaPipeline pipeline4 = kurento.createMediaPipeline();
   PlayerEndpoint playerEndpoint4;
   final Subsense subsensefilter4 = new Subsense.Builder(pipeline4).build();
-  final DetectorFilter detectorfilter4 = new DetectorFilter.Builder(pipeline4).build();
   final Visualizer vis4 = new Visualizer.Builder(pipeline4).build();
   final RecorderByMovement rec4 = new RecorderByMovement.Builder(pipeline4).build();
   String PEstream4 = "false";
@@ -114,19 +110,19 @@ public class PlayerHelper
     SAXBuilder builder = new SAXBuilder();
     File xmlFile = new File("/path/to/kurento/config.xml");
     try {
-	Document document = (Document) builder.build(xmlFile);
-	Element rootNode = document.getRootElement();
-	videoPath = rootNode.getChildText("VideoPath");
-	filterPath = rootNode.getChildText("FilterPath");
-	videourl = rootNode.getChildText("CameraURL1");
-        videourl2 = rootNode.getChildText("CameraURL2");
-        videourl3 = rootNode.getChildText("CameraURL3");
-        videourl4 = rootNode.getChildText("CameraURL4");
-        videourl5 = rootNode.getChildText("CameraURL5");
+      Document document = (Document) builder.build(xmlFile);
+      Element rootNode = document.getRootElement();
+      videoPath = rootNode.getChildText("VideoPath");
+      filterPath = rootNode.getChildText("FilterPath");
+      videourl = rootNode.getChildText("CameraURL1");
+      videourl2 = rootNode.getChildText("CameraURL2");
+      videourl3 = rootNode.getChildText("CameraURL3");
+      videourl4 = rootNode.getChildText("CameraURL4");
+      videourl5 = rootNode.getChildText("CameraURL5");
     } catch (IOException io) {
-	log.error("IOException: "+io.getMessage());
+      log.error("IOException: "+io.getMessage());
     } catch (JDOMException jdomex) {
-	log.error("JDOMException: "+jdomex.getMessage());
+      log.error("JDOMException: "+jdomex.getMessage());
     }
     log.debug("Configuration file loaded");
 
@@ -159,9 +155,6 @@ public class PlayerHelper
 
     //Pipeline logic connections
 
-    //sin clasificafor
-    //playerEndpoint.connect(vi);
-
     //con clasificador
     playerEndpoint.connect(subsensefilter1);
     subsensefilter1.connect(idf);
@@ -174,27 +167,19 @@ public class PlayerHelper
     rec1.loadConfig(filterPath+"/recorder-by-movement/config/config1.xml");
     subsensefilter1.connect(rec1);
 
-    //sin clasificador
-    //playerEndpoint2.connect(vi2);
-
     //con clasificador
     playerEndpoint2.connect(subsensefilter2);
     subsensefilter2.connect(odf);
-    //subsensefilter2.connect(vi2);
     //subsensefilter2.connect(idf2);
     rec2.loadConfig(filterPath+"/recorder-by-movement/config/config2.xml");
     subsensefilter2.connect(rec2);
 
-    //playerEndpoint3.connect(detectorfilter3);
     playerEndpoint3.connect(subsensefilter3);
-    //subsensefilter3.connect(detectorfilter3);
     subsensefilter3.connect(idf3);
     rec3.loadConfig(filterPath+"/recorder-by-movement/config/config3.xml");
     subsensefilter3.connect(rec3);
 
-    //playerEndpoint3.connect(detectorfilter3);
     playerEndpoint4.connect(subsensefilter4);
-    //subsensefilter4.connect(detectorfilter4);
     subsensefilter4.connect(vis4);
     rec4.loadConfig(filterPath+"/recorder-by-movement/config/config4.xml");
     subsensefilter4.connect(rec4);

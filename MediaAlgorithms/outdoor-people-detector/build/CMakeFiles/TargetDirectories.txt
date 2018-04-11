@@ -1,5 +1,0 @@
-/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/outdoor-people-detector/build/src/server/CMakeFiles/java.dir
-/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/outdoor-people-detector/build/src/server/CMakeFiles/java_install.dir
-/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/outdoor-people-detector/build/src/server/CMakeFiles/kmsoutdoorpeopledetectorimpl.dir
-/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/outdoor-people-detector/build/src/server/CMakeFiles/kmsoutdoorpeopledetectorinterface.dir
-/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/outdoor-people-detector/build/src/server/CMakeFiles/kmsoutdoorpeopledetectormodule.dir

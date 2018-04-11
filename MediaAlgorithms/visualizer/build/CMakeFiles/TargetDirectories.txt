@@ -1,5 +1,0 @@
-/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/visualizer/build/src/server/CMakeFiles/java.dir
-/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/visualizer/build/src/server/CMakeFiles/java_install.dir
-/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/visualizer/build/src/server/CMakeFiles/kmsvisualizerimpl.dir
-/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/visualizer/build/src/server/CMakeFiles/kmsvisualizerinterface.dir
-/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/visualizer/build/src/server/CMakeFiles/kmsvisualizermodule.dir
