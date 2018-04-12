@@ -1,9 +1,9 @@
 <Configuration>
 	<PythonFile>ContextBrokerAPI</PythonFile>
 	<PythonFunction>update_alert</PythonFunction>
-	<JsonFile>/home/viva22017/SmartSecurityApp/kurento/MediaAlgorithms/recorder-by-movement/config/update_entity3.json</JsonFile>
+	<JsonFile>/path/to/kurento/MediaAlgorithms/recorder-by-movement/config/update_entity3.json</JsonFile>
 	<ParameterName>dateTime,refDevice,eventObserved</ParameterName> 
-	<VideoPath>/home/viva22017/SmartSecurityApp/kurento/videos</VideoPath>
+	<VideoPath>/path/to/videos</VideoPath>
         <CameraName>Entrance</CameraName>
         <CameraId>3</CameraId>
 </Configuration>
