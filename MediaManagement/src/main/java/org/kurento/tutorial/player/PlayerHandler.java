@@ -108,13 +108,12 @@ public class PlayerHandler extends TextWebSocketHandler {
         case "onIceCandidate":
           onIceCandidate(sessionId, jsonMessage);
           break;
+        case "restartCameras":
+          ph.stop();
+          ph.start();
+          break;
         case "updateLabels":
-          String configFile = "/path/to/kurento/label_config.xml";
-          ph.idf.setConfiguration(configFile);
-          ph.odf.setConfiguration(configFile);
-          ph.idf3.setConfiguration(configFile);
-          ph.vis4.setConfiguration(configFile);
-          ph.idf5.setConfiguration(configFile);
+          ph.loadConfig();
           break;
         default:
           sendError(session, "Invalid message with id " + jsonMessage.get("id").getAsString());

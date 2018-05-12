@@ -102,6 +102,73 @@ public class PlayerHelper
 
 
   public PlayerHelper(){
+  /**
+   * Connect playerEndpoint -> subsenseFilter -> detectorFilter
+   *
+   * Then, start playing the playerEndpoints
+   */
+    //Set the database files for people and vehicle detection
+    idf.setDB(filterPath+"/ExternalDependencies/VPDetector/peopledb.dat");
+    idf2.setDB(filterPath+"/ExternalDependencies/VPDetector/peopledb.dat");
+    idf3.setDB(filterPath+"/ExternalDependencies/VPDetector/peopledb.dat");
+    odf.setDB(filterPath+"/ExternalDependencies/VPDetector/cardb.dat");
+    idf5.setDB(filterPath+"/ExternalDependencies/VPDetector/peopledb.dat");
+
+    loadConfig();
+
+    //Pipeline logic connections
+
+    //con clasificador
+    subsensefilter1.connect(idf);
+    //subsensefilter1.connect(vi);
+    //Load configuration file that includes: 
+    // - Name of python file
+    // - Name of function to send message
+    // - Name of json file with the data model
+    // - Others...
+    rec1.loadConfig(filterPath+"/recorder-by-movement/config/config1.xml");
+    subsensefilter1.connect(rec1);
+
+    //con clasificador
+    subsensefilter2.connect(odf);
+    //subsensefilter2.connect(idf2);
+    rec2.loadConfig(filterPath+"/recorder-by-movement/config/config2.xml");
+    subsensefilter2.connect(rec2);
+
+    subsensefilter3.connect(idf3);
+    rec3.loadConfig(filterPath+"/recorder-by-movement/config/config3.xml");
+    subsensefilter3.connect(rec3);
+
+    subsensefilter4.connect(vis4);
+    rec4.loadConfig(filterPath+"/recorder-by-movement/config/config4.xml");
+    subsensefilter4.connect(rec4);
+
+    subsensefilter5.connect(idf5);
+    rec5.loadConfig(filterPath+"/recorder-by-movement/config/config5.xml");
+    subsensefilter5.connect(rec5);
+
+    log.debug("Pipeline connections ready");
+    start();
+  }
+
+  /**
+   * Load the configuration file
+   */
+  public void loadConfig()
+  {
+    String configFile = "/path/to/kurento/label_config.xml";
+    idf.setConfiguration(configFile);
+    odf.setConfiguration(configFile);
+    idf3.setConfiguration(configFile);
+    vis4.setConfiguration(configFile);
+    idf5.setConfiguration(configFile);
+  }
+
+  /**
+   * Start the camera streams
+   */
+  public void start()
+  {
     String videourl = "";
     String videourl2 = "";
     String videourl3 = "";
@@ -133,29 +200,7 @@ public class PlayerHelper
     playerEndpoint5 = new PlayerEndpoint.Builder(pipeline5, videourl5).build();
     log.debug("PlayerEndpoints builded");
 
-  /**
-   * Connect playerEndpoint -> subsenseFilter -> detectorFilter
-   *
-   * Then, start playing the playerEndpoints
-   */
 
-    //Set the database files for people and vehicle detection
-    idf.setDB(filterPath+"/ExternalDependencies/VPDetector/peopledb.dat");
-    idf2.setDB(filterPath+"/ExternalDependencies/VPDetector/peopledb.dat");
-    idf3.setDB(filterPath+"/ExternalDependencies/VPDetector/peopledb.dat");
-    odf.setDB(filterPath+"/ExternalDependencies/VPDetector/cardb.dat");
-    idf5.setDB(filterPath+"/ExternalDependencies/VPDetector/peopledb.dat");
-
-    String configFile = "/path/to/kurento/label_config.xml";
-    idf.setConfiguration(configFile);
-    odf.setConfiguration(configFile);
-    idf3.setConfiguration(configFile);
-    vis4.setConfiguration(configFile);
-    idf5.setConfiguration(configFile);
-
-    //Pipeline logic connections
-
-    //con clasificador
     playerEndpoint.connect(subsensefilter1);
     subsensefilter1.connect(idf);
     //subsensefilter1.connect(vi);
@@ -168,34 +213,11 @@ public class PlayerHelper
     subsensefilter1.connect(rec1);
 
     //con clasificador
+    playerEndpoint.connect(subsensefilter1);
     playerEndpoint2.connect(subsensefilter2);
-    subsensefilter2.connect(odf);
-    //subsensefilter2.connect(idf2);
-    rec2.loadConfig(filterPath+"/recorder-by-movement/config/config2.xml");
-    subsensefilter2.connect(rec2);
-
     playerEndpoint3.connect(subsensefilter3);
-    subsensefilter3.connect(idf3);
-    rec3.loadConfig(filterPath+"/recorder-by-movement/config/config3.xml");
-    subsensefilter3.connect(rec3);
-
     playerEndpoint4.connect(subsensefilter4);
-    subsensefilter4.connect(vis4);
-    rec4.loadConfig(filterPath+"/recorder-by-movement/config/config4.xml");
-    subsensefilter4.connect(rec4);
-
     playerEndpoint5.connect(subsensefilter5);
-    subsensefilter5.connect(idf5);
-    rec5.loadConfig(filterPath+"/recorder-by-movement/config/config5.xml");
-    subsensefilter5.connect(rec5);
-
-    log.debug("Pipeline connections ready");
-
-    //subsensefilter1.connect(rec);
-    //subsensefilter2.connect(rec2);
-    //subsensefilter3.connect(recording3);
-    //subsensefilter4.connect(recording4);
-
 
     // 3. PlayEndpoint
     playerEndpoint.addErrorListener(new EventListener<ErrorEvent>() {
@@ -287,20 +309,25 @@ public class PlayerHelper
 
     playerEndpoint5.play();
     log.debug("PlayerEndpoint5 playing");
-  }
- 
-  /**
+}
 
-   * Stop the playerEndpoints and release the media pipeline
+  /**
+   * Stop the playerEndpoints
    */
   public void stop() throws IOException 
   {
-
     playerEndpoint.stop();
     playerEndpoint2.stop();
     playerEndpoint3.stop();
     playerEndpoint4.stop();
     playerEndpoint5.stop();
+  }
+ 
+  /**
+   * Release the media pipeline
+   */
+  public void close() throws IOException 
+  {
     pipeline.release();
     pipeline2.release();
     pipeline3.release();
