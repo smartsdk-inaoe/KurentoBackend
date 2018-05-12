@@ -140,36 +140,40 @@ public class PlayerHandler extends TextWebSocketHandler {
     WebRtcEndpoint webRtcEndpoint;// = new WebRtcEndpoint.Builder(pipeline).build();
     //user.setWebRtcEndpoint(webRtcEndpoint);
     String videourl = jsonMessage.get("videourl").getAsString();
+    JsonObject response = new JsonObject();
+    response.addProperty("id", "streamStatus");
     switch(videourl){
       case "1":
         webRtcEndpoint = new WebRtcEndpoint.Builder(ph.pipeline).build();
 	ph.idf.connect(webRtcEndpoint);
         //ph.vi.connect(webRtcEndpoint);
+        response.addProperty("status", ph.PEstream1);
         break;
       case "2":
         webRtcEndpoint = new WebRtcEndpoint.Builder(ph.pipeline2).build();
         ph.odf.connect(webRtcEndpoint);
         //ph.idf2.connect(webRtcEndpoint);
         //ph.vi2.connect(webRtcEndpoint);
+        response.addProperty("status", ph.PEstream2);
         break;
       case "3":
         webRtcEndpoint = new WebRtcEndpoint.Builder(ph.pipeline3).build();
         //ph.detectorfilter3.connect(webRtcEndpoint);
         ph.idf3.connect(webRtcEndpoint);
+        response.addProperty("status", ph.PEstream3);
         break;
       case "4":
         webRtcEndpoint = new WebRtcEndpoint.Builder(ph.pipeline4).build();
         ph.vis4.connect(webRtcEndpoint);
-        JsonObject response = new JsonObject();
-        response.addProperty("id", "streamStatus");
         response.addProperty("status", ph.PEstream4);
-        sendMessage(session, response.toString());
         break;
       default:
         webRtcEndpoint = new WebRtcEndpoint.Builder(ph.pipeline5).build();
         ph.idf5.connect(webRtcEndpoint);
+        response.addProperty("status", ph.PEstream5);
         break;
     }
+    sendMessage(session, response.toString());
     user.setWebRtcEndpoint(webRtcEndpoint);
     users.put(session.getId(), user);
 
@@ -195,7 +199,7 @@ public class PlayerHandler extends TextWebSocketHandler {
     String sdpOffer = jsonMessage.get("sdpOffer").getAsString();
     String sdpAnswer = webRtcEndpoint.processOffer(sdpOffer);
 
-    JsonObject response = new JsonObject();
+    response = new JsonObject();
     response.addProperty("id", "startResponse");
     response.addProperty("sdpAnswer", sdpAnswer);
     sendMessage(session, response.toString());

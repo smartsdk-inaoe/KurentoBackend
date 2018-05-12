@@ -52,6 +52,8 @@ public class PlayerHelper
 
   String videoPath;
   String filterPath;
+  File xmlFile;
+
   /**
    * Create Media pipeline and build PlayerEndpoint, SubsenseFilter and DetectorFilter
    */
@@ -68,6 +70,7 @@ public class PlayerHelper
   final IndoorPeopleDetector idf = new IndoorPeopleDetector.Builder(pipeline).build();
   //Initialize filter that triggers a context broker message and recording based on movement
   final RecorderByMovement rec1 = new RecorderByMovement.Builder(pipeline).build();
+  String PEstream1 = "true";
 
   //Dinning Entrance
   final MediaPipeline pipeline2 = kurento.createMediaPipeline();
@@ -76,6 +79,7 @@ public class PlayerHelper
   final OutdoorPeopleDetector odf = new OutdoorPeopleDetector.Builder(pipeline2).build();
   final IndoorPeopleDetector idf2 = new IndoorPeopleDetector.Builder(pipeline2).build();
   final RecorderByMovement rec2 = new RecorderByMovement.Builder(pipeline2).build();
+  String PEstream2 = "true";
 
   //INAOE's main entrance
   final MediaPipeline pipeline3 = kurento.createMediaPipeline();
@@ -84,6 +88,7 @@ public class PlayerHelper
   final RecorderByMovement rec3 = new RecorderByMovement.Builder(pipeline3).build();
 
   final IndoorPeopleDetector idf3= new IndoorPeopleDetector.Builder(pipeline3).build();
+  String PEstream3 = "true";
 
   //INAOE's parking lot
   final MediaPipeline pipeline4 = kurento.createMediaPipeline();
@@ -91,7 +96,7 @@ public class PlayerHelper
   final Subsense subsensefilter4 = new Subsense.Builder(pipeline4).build();
   final Visualizer vis4 = new Visualizer.Builder(pipeline4).build();
   final RecorderByMovement rec4 = new RecorderByMovement.Builder(pipeline4).build();
-  String PEstream4 = "false";
+  String PEstream4 = "true";
   
   //Hallway 3
   final MediaPipeline pipeline5 = kurento.createMediaPipeline();
@@ -99,6 +104,7 @@ public class PlayerHelper
   final Subsense subsensefilter5 = new Subsense.Builder(pipeline5).build();
   final IndoorPeopleDetector idf5 = new IndoorPeopleDetector.Builder(pipeline5).build();
   final RecorderByMovement rec5 = new RecorderByMovement.Builder(pipeline5).build();
+  String PEstream5 = "true";
 
 
   public PlayerHelper(){
@@ -107,6 +113,19 @@ public class PlayerHelper
    *
    * Then, start playing the playerEndpoints
    */
+    SAXBuilder builder = new SAXBuilder();
+    xmlFile = new File("/path/to/kurento/config.xml");
+    try {
+      Document document = (Document) builder.build(xmlFile);
+      Element rootNode = document.getRootElement();
+      videoPath = rootNode.getChildText("VideoPath");
+      filterPath = rootNode.getChildText("FilterPath");
+    } catch (IOException io) {
+      log.error("IOException: "+io.getMessage());
+    } catch (JDOMException jdomex) {
+      log.error("JDOMException: "+jdomex.getMessage());
+    }
+    log.debug("Configuration file loaded");
     //Set the database files for people and vehicle detection
     idf.setDB(filterPath+"/ExternalDependencies/VPDetector/peopledb.dat");
     idf2.setDB(filterPath+"/ExternalDependencies/VPDetector/peopledb.dat");
@@ -175,12 +194,9 @@ public class PlayerHelper
     String videourl4 = "";
     String videourl5 = "";
     SAXBuilder builder = new SAXBuilder();
-    File xmlFile = new File("/path/to/kurento/config.xml");
     try {
       Document document = (Document) builder.build(xmlFile);
       Element rootNode = document.getRootElement();
-      videoPath = rootNode.getChildText("VideoPath");
-      filterPath = rootNode.getChildText("FilterPath");
       videourl = rootNode.getChildText("CameraURL1");
       videourl2 = rootNode.getChildText("CameraURL2");
       videourl3 = rootNode.getChildText("CameraURL3");
@@ -191,7 +207,7 @@ public class PlayerHelper
     } catch (JDOMException jdomex) {
       log.error("JDOMException: "+jdomex.getMessage());
     }
-    log.debug("Configuration file loaded");
+    log.debug("Configuration file reloaded");
 
     playerEndpoint = new PlayerEndpoint.Builder(pipeline, videourl).build();
     playerEndpoint2 = new PlayerEndpoint.Builder(pipeline2, videourl2).build();
@@ -199,18 +215,6 @@ public class PlayerHelper
     playerEndpoint4 = new PlayerEndpoint.Builder(pipeline4, videourl4).build();
     playerEndpoint5 = new PlayerEndpoint.Builder(pipeline5, videourl5).build();
     log.debug("PlayerEndpoints builded");
-
-
-    playerEndpoint.connect(subsensefilter1);
-    subsensefilter1.connect(idf);
-    //subsensefilter1.connect(vi);
-    //Load configuration file that includes: 
-    // - Name of python file
-    // - Name of function to send message
-    // - Name of json file with the data model
-    // - Others...
-    rec1.loadConfig(filterPath+"/recorder-by-movement/config/config1.xml");
-    subsensefilter1.connect(rec1);
 
     //con clasificador
     playerEndpoint.connect(subsensefilter1);
@@ -224,6 +228,7 @@ public class PlayerHelper
         @Override
         public void onEvent(ErrorEvent event) {
           log.error("ErrorEvent: {}", event.getDescription());
+          PEstream1 = "error";
         }
     });
 
@@ -231,6 +236,7 @@ public class PlayerHelper
         @Override
         public void onEvent(EndOfStreamEvent event) {
           log.error("EndOfCameraStreamEvent: {}", event.getTimestamp());
+          PEstream1 = "end";
         }
     });
 
@@ -242,6 +248,7 @@ public class PlayerHelper
         @Override
         public void onEvent(ErrorEvent event) {
           log.error("ErrorEvent2: {}", event.getDescription());
+          PEstream2 = "error";
         }
     });
 
@@ -249,6 +256,7 @@ public class PlayerHelper
         @Override
         public void onEvent(EndOfStreamEvent event) {
           log.error("EndOfCameraStreamEvent2: {}", event.getTimestamp());
+          PEstream2 = "end";
         }
     });
 
@@ -260,6 +268,7 @@ public class PlayerHelper
         @Override
         public void onEvent(ErrorEvent event) {
           log.error("ErrorEvent3: {}", event.getDescription());
+          PEstream3 = "error";
         }
     });
 
@@ -267,6 +276,7 @@ public class PlayerHelper
         @Override
         public void onEvent(EndOfStreamEvent event) {
           log.error("EndOfCameraStreamEvent3: {}", event.getTimestamp());
+          PEstream3 = "end";
         }
     });
 
@@ -278,7 +288,7 @@ public class PlayerHelper
         @Override
         public void onEvent(ErrorEvent event) {
           log.error("ErrorEvent4: {}", event.getDescription());
-          PEstream4 = "true";
+          PEstream4 = "error";
         }
     });
 
@@ -286,6 +296,7 @@ public class PlayerHelper
         @Override
         public void onEvent(EndOfStreamEvent event) {
           log.error("EndOfCameraStreamEvent4: {}", event.getTimestamp());
+          PEstream4 = "end";
         }
     });
 
@@ -297,6 +308,7 @@ public class PlayerHelper
         @Override
         public void onEvent(ErrorEvent event) {
           log.error("ErrorEvent5: {}", event.getDescription());
+          PEstream5 = "error";
         }
     });
 
@@ -304,6 +316,7 @@ public class PlayerHelper
         @Override
         public void onEvent(EndOfStreamEvent event) {
           log.error("EndOfCameraStreamEvent5: {}", event.getTimestamp());
+          PEstream5 = "end";
         }
     });
 
