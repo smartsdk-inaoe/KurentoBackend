@@ -1,3 +1,0 @@
-/home/viva22017/viva_ws/bgslibrary-master/build/CMakeFiles/bgs.dir
-/home/viva22017/viva_ws/bgslibrary-master/build/CMakeFiles/bgs_bin.dir
-/home/viva22017/viva_ws/bgslibrary-master/build/CMakeFiles/bgs_demo.dir

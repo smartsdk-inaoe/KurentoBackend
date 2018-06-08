@@ -24,9 +24,9 @@ VisualizerImpl::VisualizerImpl (const boost::property_tree::ptree &config, std::
 {
 }
 
-void VisualizerImpl::setConfiguration(const std::string &file)
+void VisualizerImpl::setConfiguration (const std::string &file)
 {
-        VisualizerOpenCVImpl::setConfiguration(file);
+  VisualizerOpenCVImpl::setConfiguration (file);
 }
 
 MediaObjectImpl *

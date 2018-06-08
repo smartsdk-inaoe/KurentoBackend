@@ -1,2 +1,0 @@
-/usr/bin/ar cr libkmsrecorderbymovementinterface.a  CMakeFiles/kmsrecorderbymovementinterface.dir/interface/generated-cpp/RecorderByMovementInternal.cpp.o CMakeFiles/kmsrecorderbymovementinterface.dir/interface/generated-cpp/RecorderByMovement.cpp.o
-/usr/bin/ranlib libkmsrecorderbymovementinterface.a

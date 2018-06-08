@@ -14,7 +14,7 @@ namespace subsense
 
 SubsenseOpenCVImpl::SubsenseOpenCVImpl ()
 {
-	bgs = new SuBSENSEBGS;
+	bgs = new BackgroundSubtractorSuBSENSE;
 }
 
 SubsenseOpenCVImpl::~SubsenseOpenCVImpl ()
@@ -35,8 +35,13 @@ void SubsenseOpenCVImpl::process (cv::Mat &mat)
 
 	//Resize gray image and process it
 	resize(gray_img,gray_img,Size(mat.cols/2,mat.rows/2));
+	if(firstRun){
+		Mat roi(gray_img.size(),CV_8UC1,Scalar_<uchar>(255));
+		bgs->initialize(gray_img,roi);
+		firstRun = false;
+	}
 	Mat foreground_img, bmodel_img;
-	bgs->process(gray_img,foreground_img,bmodel_img);
+	bgs->apply(gray_img,foreground_img);
 	resize(foreground_img,foreground_img,Size(mat.cols,mat.rows));
 
 	//Insert the binary image in the input's alpha channel

@@ -114,7 +114,7 @@ public class PlayerHelper
    * Then, start playing the playerEndpoints
    */
     SAXBuilder builder = new SAXBuilder();
-    xmlFile = new File("/path/to/kurento/config.xml");
+    xmlFile = new File("/path/to/KurentoBackend/config.xml");
     try {
       Document document = (Document) builder.build(xmlFile);
       Element rootNode = document.getRootElement();
@@ -175,7 +175,7 @@ public class PlayerHelper
    */
   public void loadConfig()
   {
-    String configFile = "/path/to/kurento/label_config.xml";
+    String configFile = "/path/to/KurentoBackend/label_config.xml";
     idf.setConfiguration(configFile);
     odf.setConfiguration(configFile);
     idf3.setConfiguration(configFile);

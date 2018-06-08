@@ -46,7 +46,7 @@ public:
 
   virtual ~RecorderByMovementImpl () {};
 
-  void loadConfig(const std::string &file);
+  void loadConfig (const std::string &file);
 
   /* Next methods are automatically implemented by code generator */
   virtual bool connect (const std::string &eventType, std::shared_ptr<EventHandler> handler);

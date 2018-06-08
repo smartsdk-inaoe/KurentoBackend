@@ -6,7 +6,7 @@
 #include <OpenCVProcess.hpp>
 #include "Subsense.hpp"
 #include <EventHandler.hpp>
-#include <SuBSENSE.h>
+#include <BackgroundSubtractorSuBSENSE.h>
 
 namespace kurento
 {
@@ -20,8 +20,8 @@ class SubsenseOpenCVImpl : public virtual OpenCVProcess
 
 private:
 
-		SuBSENSEBGS* bgs;
-
+		BackgroundSubtractorSuBSENSE* bgs;
+		bool firstRun = true;
 
 public:
 

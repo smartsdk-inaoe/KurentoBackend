@@ -24,16 +24,15 @@ IndoorPeopleDetectorImpl::IndoorPeopleDetectorImpl (const boost::property_tree::
 {
 }
 
-void IndoorPeopleDetectorImpl::setDB(const std::string &db)
+void IndoorPeopleDetectorImpl::setDB (const std::string &db)
 {
-        IndoorPeopleDetectorOpenCVImpl::setDB(db);
+  IndoorPeopleDetectorOpenCVImpl::setDB (db);
 }
 
-void IndoorPeopleDetectorImpl::setConfiguration(const std::string &file)
+void IndoorPeopleDetectorImpl::setConfiguration (const std::string &file)
 {
-        IndoorPeopleDetectorOpenCVImpl::setConfiguration(file);
+  IndoorPeopleDetectorOpenCVImpl::setConfiguration (file);
 }
-
 
 MediaObjectImpl *
 IndoorPeopleDetectorImplFactory::createObject (const boost::property_tree::ptree &config, std::shared_ptr<MediaPipeline> mediaPipeline) const

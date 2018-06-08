@@ -4,18 +4,18 @@ include (CodeGenerator)
 
 
 set(SOURCES 
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/VPDetector/source/VPDetector.cpp
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/tinyxml2-master/tinyxml2.cpp
+  /path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/VPDetector/source/VPDetector.cpp
+  /path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/tinyxml2-master/tinyxml2.cpp
 )
 
 set(HEADERS 
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/VPDetector/include/VPDetector.hpp
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/tinyxml2-master/tinyxml2.h
+  /path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/VPDetector/include/VPDetector.hpp
+  /path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/tinyxml2-master/tinyxml2.h
 )
 
 set(DIRS 
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/VPDetector/include
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/tinyxml2-master
+  /path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/VPDetector/include
+  /path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/tinyxml2-master
 )
 
 generate_code (

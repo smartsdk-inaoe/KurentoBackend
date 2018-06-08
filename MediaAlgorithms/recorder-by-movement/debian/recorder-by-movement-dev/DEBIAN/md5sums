@@ -1,9 +1,0 @@
-11374f5ae39450d6249ee668f144d5a8  usr/include/kurento/modules/recorderbymovement/RecorderByMovement.hpp
-4f8585f3999a3b4a36a89584c8b76894  usr/include/kurento/modules/recorderbymovement/RecorderByMovementImpl.hpp
-9ce01a890352088b435ba53304e79de6  usr/include/kurento/modules/recorderbymovement/RecorderByMovementImplFactory.hpp
-e95c886a5d730ee0c651bba30e9c87ed  usr/include/kurento/modules/recorderbymovement/RecorderByMovementOpenCVImpl.hpp
-5e44cab37fdc467e1a07dd68ea29432e  usr/lib/x86_64-linux-gnu/pkgconfig/kmsrecorderbymovement.pc
-c7378959e4da743df1922585a93884b3  usr/share/cmake-2.8/Modules/FindKMSRECORDERBYMOVEMENT.cmake
-4a28f6e51a204dbcc53d4eab14a408c4  usr/share/doc/recorder-by-movement-dev/changelog.gz
-d41d8cd98f00b204e9800998ecf8427e  usr/share/doc/recorder-by-movement-dev/copyright
-bdcfe3f98ecf75a41f115a679ff51116  usr/share/kurento/modules/recorderbymovement.kmd.json

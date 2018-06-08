@@ -3,25 +3,23 @@ cmake_minimum_required (VERSION 2.8)
 include (CodeGenerator)
 
 set(SOURCES 
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/bgslibrary-master/package_bgs/pl/SuBSENSE.cpp 
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/bgslibrary-master/package_bgs/pl/BackgroundSubtractorSuBSENSE.cpp 
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/bgslibrary-master/package_bgs/pl/BackgroundSubtractorLBSP.cpp 
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/bgslibrary-master/package_bgs/pl/LBSP.cpp
+  /path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/bgslibrary/package_bgs/LBSP/BackgroundSubtractorSuBSENSE.cpp 
+  /path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/bgslibrary/package_bgs/LBSP/BackgroundSubtractorLBSP.cpp 
+  /path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/bgslibrary/package_bgs/LBSP/LBSP.cpp
 )
 
 set(HEADERS 
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/bgslibrary-master/package_bgs/pl/SuBSENSE.h 
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/bgslibrary-master/package_bgs/IBGS.h 
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/bgslibrary-master/package_bgs/pl/BackgroundSubtractorSuBSENSE.h 
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/bgslibrary-master/package_bgs/pl/BackgroundSubtractorLBSP.h 
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/bgslibrary-master/package_bgs/pl/LBSP.h 
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/bgslibrary-master/package_bgs/pl/DistanceUtils.h 
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/bgslibrary-master/package_bgs/pl/RandUtils.h
+  /path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/bgslibrary/package_bgs/IBGS.h 
+  /path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/bgslibrary/package_bgs/LBSP/BackgroundSubtractorSuBSENSE.h 
+  /path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/bgslibrary/package_bgs/LBSP/BackgroundSubtractorLBSP.h 
+  /path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/bgslibrary/package_bgs/LBSP/LBSP.h 
+  /path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/bgslibrary/package_bgs/LBSP/DistanceUtils.h 
+  /path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/bgslibrary/package_bgs/LBSP/RandUtils.h
 )
 
 set(DIRS 
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/bgslibrary-master/package_bgs/pl 
-  /path/to/kurento/MediaAlgorithms/ExternalDependencies/bgslibrary-master/package_bgs
+  /path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/bgslibrary/package_bgs/LBSP
+  /path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/bgslibrary/package_bgs
 )
 
 generate_code (

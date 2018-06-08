@@ -24,9 +24,9 @@ RecorderByMovementImpl::RecorderByMovementImpl (const boost::property_tree::ptre
 {
 }
 
-void RecorderByMovementImpl::loadConfig(const std::string &file)
+void RecorderByMovementImpl::loadConfig (const std::string &file)
 {
-  RecorderByMovementOpenCVImpl::loadConfig(file);
+  RecorderByMovementOpenCVImpl::loadConfig (file);
 }
 
 MediaObjectImpl *

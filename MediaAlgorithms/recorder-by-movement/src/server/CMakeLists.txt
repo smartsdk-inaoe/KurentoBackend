@@ -2,17 +2,17 @@ cmake_minimum_required (VERSION 2.8)
 
 include (CodeGenerator)
 set(SOURCES
-/path/to/kurento/MediaAlgorithms/ExternalDependencies/tinyxml2-master/tinyxml2.cpp
+/path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/tinyxml2-master/tinyxml2.cpp
 )
 
 set(HEADERS
-/path/to/kurento/MediaAlgorithms/ExternalDependencies/tinyxml2-master/tinyxml2.h
+/path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/tinyxml2-master/tinyxml2.h
 /usr/include/python2.7/Python.h
 /usr/include/x86_64-linux-gnu/python2.7/pyconfig.h
 )
 
 set(DIRS
-/path/to/kurento/MediaAlgorithms/ExternalDependencies/tinyxml2-master
+/path/to/KurentoBackend/MediaAlgorithms/ExternalDependencies/tinyxml2-master
 /usr/include/python2.7
 /usr/include/x86_64-linux-gnu/python2.7
 )

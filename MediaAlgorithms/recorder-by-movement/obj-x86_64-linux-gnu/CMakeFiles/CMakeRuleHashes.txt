@@ -1,6 +1,0 @@
-# Hashes of file build rules.
-f966476038201d861026ae466fd3c8c5 src/server/cpp_interface.generated
-f42a51d2eaad8c801e9d977ca2eecdf0 src/server/cpp_interface_internal.generated
-b167c1b09d232b65754c93c7544c054e src/server/cpp_module.generated
-c5b3e92c46309ebb3bf4d13fda9616af src/server/cpp_server_internal.generated
-7983c17f0f9f9d3b038cb66172700ce1 src/server/recorderbymovement.kmd.json

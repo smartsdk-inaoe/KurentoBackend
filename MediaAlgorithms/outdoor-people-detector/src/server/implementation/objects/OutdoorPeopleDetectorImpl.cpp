@@ -24,16 +24,15 @@ OutdoorPeopleDetectorImpl::OutdoorPeopleDetectorImpl (const boost::property_tree
 {
 }
 
-void OutdoorPeopleDetectorImpl::setDB(const std::string &db)
+void OutdoorPeopleDetectorImpl::setDB (const std::string &db)
 {
-        OutdoorPeopleDetectorOpenCVImpl::setDB(db);
+  OutdoorPeopleDetectorOpenCVImpl::setDB (db);
 }
 
-void OutdoorPeopleDetectorImpl::setConfiguration(const std::string &file)
+void OutdoorPeopleDetectorImpl::setConfiguration (const std::string &file)
 {
-        OutdoorPeopleDetectorOpenCVImpl::setConfiguration(file);
+  OutdoorPeopleDetectorOpenCVImpl::setConfiguration (file);
 }
-
 
 MediaObjectImpl *
 OutdoorPeopleDetectorImplFactory::createObject (const boost::property_tree::ptree &config, std::shared_ptr<MediaPipeline> mediaPipeline) const
